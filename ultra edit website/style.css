@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Nav bar styling */
+nav .logo img {
+    width: 150px;
+}
+
+nav .rightitem {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav .rightitem img {
+    height: 20px;
+}
+
+nav .rightitem span:first-child {
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 600;
+
+}
+
+nav .centeritem ul {
+    display: flex;
+    list-style-type: none;
+    gap: 40px;
+}
+
+nav .centeritem ul li {
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* nav .centeritem ul img{
+    display: block;
+    size: 20px;
+} */
+nav .centeritem ul li::after {
+    content: "";
+    /* no url here */
+    display: flex;
+    width: 10px;
+    height: 10px;
+    background-image: url("./arrow-down-3101.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2vw;
+    align-items: center;
+}
+
+/* main content styling */
+.bold-word {
+    font-weight: bold;
+}
+
+main .section1 {
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 20vw 0vh 20vw;
+    /* justify-content: center; */
+    align-items: center;
+    row-gap: 50px;
+}
+
+main .section1 h1,
+h2,
+h4 {
+    text-align: center;
+}
+
+main .section1 h4 a {
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color: rgb(22, 158, 255);
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+main .section1 img[alt="logo"] {
+    width: 150px;
+    /* height: auto; */
+}
+
+main .section1 .lowersection {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    align-self: flex-start;
+}
+
+main .section1 .lowersection h2 span {
+    font-size: 14px;
+}
+
+/* Main Section --> Section 2 */
+main .section2 {
+    /* border: 2px solid purple; */
+    /* height: 100vh; */
+    padding: 5vh 20vw 0vh 20vw;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    place-content: center;
+    gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 2fr);
+
+}
+
+main .section2 .item {
+    /* border: 2px solid black; */
+    /* background-color: rgb(238, 238, 238); */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 10px;
+
+}
+
+main .section2 .item .line:nth-child(3) {
+    border-radius: 5px;
+    background-color: rgb(47, 176, 8);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0px 40px;
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+main .section2 .item .line:nth-child(3) a {
+    color: white;
+    font-weight: bold;
+    text-decoration-line: none;
+
+}
+
+main .section2 .item .line:nth-child(2),
+.line:nth-child(4) {
+    font-size: 12px;
+}
+
+main .section2 .item .line:nth-last-of-type(1),
+.line:nth-last-of-type(2) {
+    font-size: 8px;
+}
+
+/* Main Section-3 */
+main .section3 {
+    display: grid;
+    height: 100vh;
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    padding: 0vh 20vw 0vh 20vw;
+    align-items: center;
+    /* column-gap: 40px; */
+
+}
+
+main .section3 .upperbox {
+    display: grid;
+    grid-template-areas: "box1 box2";
+    gap: 80px;
+}
+
+main .section3 .upperbox .box1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .section3 .box1,
+.box2 {
+    text-align: center;
+    /* display: block; */
+    /* display: flex;
+    flex-direction: column; */
+
+}
+
+main .section3 .box1 h2,
+.box2 h2{
+    margin-bottom: 20px;
+
+}
+
+main .section3 .box1,
+.box2 input {
+    margin-bottom: 10px;
+
+}
+
+main .section3 .box2 {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 10px;
+    /* row-gap: 20px; */
+    /* border: 2px solid beige; */
+}
+
+main .section3 .box2 h2 {
+    color: rgb(10, 177, 249);
+}
+
+main .section3 .box2 input[type="submit"] {
+    background-color: rgb(10, 177, 249);
+    font-weight: bold;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    border: 0px;
+
+}
+
+main .section3 .box2 input[type="email"] {
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.345);
+
+}
+
+main .section3 .box2 label[for="email"] {
+    font-size: 12px;
+
+}
+
+/* Main section-3 box3 */
+main .section3 .box3{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+
+/* Making Responsive */
+@media only screen and (max-width:980px){
+    main .section2 {
+    /* border: 2px solid purple; */ 
+    /* height: 100vh;*/
+    padding: 5vh 20vw 0vh 20vw;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    place-content: center;
+    gap: 50px; 
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 2fr);
+
+}
+}
+@media only screen and (max-width:600px){
+    main .section2 {
+    /* border: 2px solid purple; */ 
+    /* height: 100vh;*/
+    padding: 5vh 20vw 0vh 20vw;
+    display: grid;
+    align-items: center;
+    align-content: center;
+    place-content: center;
+    gap: 50px; 
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 2fr);
+
+}
+}

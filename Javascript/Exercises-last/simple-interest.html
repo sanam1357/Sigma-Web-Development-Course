@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter-12 Practice Set</title>
+    <style>
+        *{
+            background-color: black;
+            color: white;
+            
+        }
+        .calculator * {
+            display: block;
+        }
+        .average * {
+            display: block;
+        }
+        input,button{
+            border: 2px solid white;
+        }
+        input::placeholder{
+            color: rgba(255, 255, 255, 0.69);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Program to Calculate Simple Interest</h1>
+    <div class="calculator">
+        <label for="principle">Principle</label>
+        <input type="text" id="principle" placeholder="Enter the Amount">
+        <label for="rate">Rate(%)</label>
+        <input type="text" id="rate" placeholder="Enter the Rate(%)">
+        <label for="time">Time(in yrs)</label>
+        <input type="text" id="time" placeholder="Enter the Time">
+        <button id="calculate">Calculate</button>
+    </div>
+
+
+
+    <script>
+        document.getElementById("calculate").onclick = () => {
+            let p = parseInt(document.getElementById("principle").value)
+            let r = parseInt(document.getElementById("rate").value)
+            let t = parseInt(document.getElementById("time").value)
+            if ((p && t && r) || (p && t && r == 0)) {
+                let si = ((p * t * r) / 100)
+                // console.log(si)
+                alert(`The Simple Interest is Rs ${si}`)
+        
+            }
+            else {
+                alert("Please Fill the Form Correclty")
+            }
+            (document.getElementById("principle").value) = "";
+            (document.getElementById("rate").value) = "";
+            (document.getElementById("time").value) = "";
+
+
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

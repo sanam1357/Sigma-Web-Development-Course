@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postion in CSS</title>
+    <style>
+        .{
+            margin: 0;
+            padding: 0;
+
+        }
+        .parent{
+            border: 2px solid black;
+            position: relative;
+            /* bottom: 100px; */
+        }
+        
+        .box{
+            width: 50vw;
+            height: 10vh;
+            border: 2px solid black;
+            margin: 10px;
+            padding: 5px;
+            color: rgb(37, 17, 44);
+            text-decoration: underline;
+
+        }
+        .box1{
+            background-color: green;
+            position: relative;
+            top: 100px;
+    
+        }
+        .box2{
+            background-color: red;
+            position:relative;
+            bottom: 100px;
+        }
+        .box3{
+            background-color: blue;
+            position: absolute;
+            /* when position is absolute it will move according to its' parents which position is not static. for example. check it by commeting .parent postion. you will find it. */
+            top:0px;
+            left: 40vw;
+        }
+        .box4{
+            background-color: yellow;
+            position: fixed;
+            top:20px;
+            left: 50vw;
+        }
+        .nav{
+            display: flex;
+            margin: 5px;
+            position: sticky;
+            top: 1px;
+            background-color: aqua;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Position in CSS</h1>
+    
+    <ol>
+        <li>Static(Default)</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>fixed</li>
+        <li>Sticky</li>
+        <li>Transform, filter, invert also work as postion</li>
+    </ol>
+      <div class="nav">
+        <ul>Home</ul>
+        <ul>About</ul>
+        <ul>Contact</ul>
+    </div>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit quis cumque ea impedit laudantium voluptatibus mollitia vel recusandae nihil odit, debitis corrupti explicabo assumenda deserunt sapiente? Ab, fuga, asperiores porro, sapiente ullam libero veniam voluptas provident ea necessitatibus minima saepe obcaecati odio ut deleniti quas id ratione sequi ipsam sunt voluptatibus dolores! Earum exercitationem aliquam tempore itaque accusamus nesciunt veritatis, ullam officia esse dolorum sapiente laudantium quisquam facilis id ad excepturi accusantium. Ea reiciendis sint ducimus excepturi aliquid ipsam placeat error possimus laboriosam, odio nemo id libero, optio qui minima amet iusto quisquam sapiente. Pariatur, perspiciatis aspernatur cumque et molestias ducimus nisi. Dolor voluptatem suscipit, explicabo dolorum praesentium, esse illum quo officia enim illo alias ad mollitia aperiam corporis aut nihil asperiores veritatis. Corrupti delectus in totam fugit voluptatibus doloremque non laborum at incidunt eaque, distinctio magnam, impedit dolorum dicta perspiciatis consequuntur, sunt tempora fuga nobis porro. Sequi consequuntur atque odio sed itaque, quisquam nam suscipit praesentium aspernatur error neque, quaerat et maiores sit quae. Esse inventore repellat laboriosam doloribus architecto cupiditate non voluptatibus delectus nemo! Tenetur, quas impedit iste error odit, ratione eveniet ad ullam facilis neque id est expedita unde ipsum aut cumque beatae! Repellat ipsum culpa nam facere nobis dolores, quos pariatur asperiores delectus deserunt deleniti inventore numquam sapiente magni sequi illo veniam beatae iusto, nulla tempora, alias optio consequatur voluptatem. Quisquam culpa, atque tempora perspiciatis, dignissimos ducimus ratione, labore sed veniam odio eaque saepe quos illum. Sunt, natus asperiores blanditiis nam soluta neque, dignissimos sapiente distinctio quaerat minus quis vero reprehenderit officia, consequuntur ipsam aliquam! Saepe voluptatum nostrum enim, aspernatur inventore ratione amet, magnam consequatur fugiat at provident pariatur aliquid incidunt in? Expedita obcaecati accusantium similique nesciunt a esse? Laudantium dolor, quidem totam consectetur in blanditiis culpa possimus, dicta tempore dolorum est vel similique esse excepturi.
+    </p>
+
+    <div class="parent">
+        <div class="box box1">BOX 1</div>
+        <div class="box box2">BOX 2</div>
+        <div class="box box3">BoX 3</div>
+        <div class="box box4">BOX 4</div>
+    </div>
+  
+</body>
+</html>

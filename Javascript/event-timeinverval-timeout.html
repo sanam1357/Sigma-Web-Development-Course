@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event,Time Interval, Timeout</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="content">
+                <h1>Hi I am SuperMan</h1>
+            </div>
+            <button class="b1">
+                click Me
+            </button>
+            <button class="b2">Double click to Change</button>
+        </div>
+        <div class="timer">
+            This is Timer
+        </div>
+      <button class="b3">
+        Hover me & Click me
+      </button>
+    </div>
+    <script>
+        //Event
+        //There are many types of event : mouse,keyboard e.t.c where it runs a function when clicked
+        
+        console.log("js initalized")
+        let btn3 = document.querySelector(".b3")
+        btn3.onclick = function (){
+            alert("you are good");
+        }
+
+
+
+
+        let btn1 = document.querySelector(".b1")
+        btn1.addEventListener("click", () => {
+            alert("you are Sanam")
+        })
+
+        let btn2 = document.querySelector(".b2")
+        btn2.addEventListener("dblclick", () => {
+            document.querySelector(".content").innerHTML = "<h1>I am changed</h1>"
+        })
+        let content = document.querySelector(".content")
+        content.addEventListener("contextmenu", () => {
+            alert("No Edit Please")
+        })
+
+        document.addEventListener("keydown", (e) => {
+            console.log(e, e.key, e.keyCode)
+        })
+
+             function getRandomColor() {
+            let val1 = Math.ceil(0 + Math.random() * 255);
+            let val2 = Math.ceil(0 + Math.random() * 255);
+            let val3 = Math.ceil(0 + Math.random() * 255);
+            return `rgb(${val1}, ${val2}, ${val3})`
+        }
+
+
+        // let i = 1
+        // let interval_loop = setInterval(() => {
+        //    tm =  document.querySelector(".timer")
+        //    tm.style.backgroundColor = getRandomColor()
+        //    tm.innerHTML = i
+        //    i += 1
+         
+             
+   
+        // }, 1000);
+        // console.log(interval_loop)
+        // clearInterval(1) //to stop the inverval where number is may be the id number of it
+        
+
+        //settimeout is same like timeinterval but it runs only one time
+        // let i = 1
+        // let interval_loop = setTimeout(() => {
+        //    tm =  document.querySelector(".timer")
+        //    tm.style.backgroundColor = getRandomColor()
+        //    tm.innerHTML = i
+        //    i += 1
+         
+             
+   
+        // }, 5000);
+        // console.log(interval_loop)
+        // clearTimeout(1) //tostop the settimeout
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

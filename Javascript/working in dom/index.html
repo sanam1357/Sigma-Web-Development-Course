@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working in DOM</title>
+    <style>
+        .box,
+        .area {
+            border: 2px solid black;
+            width: 100px;
+            height: 60px;
+        }
+
+        .container,
+        .container2 {
+            margin: 20px;
+            border: 2px solid blue;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Working in DOM</h1>
+    <form action="">
+        <label for="Full_Name">Full Name</label>
+        <input type="Text" name="Full_Name" placeholder="Enter your Name">
+    </form>
+
+    <div class="table">
+        <table>
+            <thead>
+                Data of Students
+
+            </thead>
+            <tbody>
+        
+                <tr>
+                    <td>Sanam</td>
+                    <td>12</td>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <td>Ashish</td>
+                    <td>11</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Sudip</td>
+                    <td>10</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
+    <div class="container2">
+        <div class="area">Area 1</div>
+        <div class="area">Area 2</div>
+        <div class="area">Area 3</div>
+        <div class="area" id="A4">Area 4</div>
+        <div class="area">Area 5</div>
+    </div>
+    <script>
+
+        //    console.log(document.body)
+        //    console.log(document.body.childNodes) // it will display all child text child notes(which can be also empty), comment child notes & Element child node(main we target it)
+        //    console.log(document.body.children) // it will only display element node
+        //    let container = document.body.children[0]
+        //    console.log(container.children)
+        //    container.children[2].style.backgroundColor = "red"
+        //    container.children[3].style.color = "red"
+        //    container.children[3].nextElementSibling.style.backgroundColor = "yellow"
+        //    container.children[2].previousElementSibling.style.backgroundColor = "blue"
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

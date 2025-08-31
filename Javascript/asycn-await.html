@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asycn=Await</title>
+</head>
+
+<body>
+    <script>
+        console.log("js initialized")
+        function weatherdata() {
+         let x = new Promise((resolve,reject)=>{
+            setTimeout(() => {
+                    resolve("The weather is cold Today")
+                }, 3500);
+         })
+         return x
+
+
+        }
+
+        async function showdata() {
+            console.log('Showing Data');
+            let x = await weatherdata()
+            console.log(x)
+            console.log("Finished showing data")
+
+
+
+        }
+        showdata()
+    </script>
+</body>
+
+</html>

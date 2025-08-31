@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selector</title>
+    <style>
+        /* .card:nth-child(2){
+            color: red;
+        } */
+
+        /* .cards *{
+            color: blue;
+        } */
+
+        .card::before{
+            content: "Name :";
+            color: blue;
+        }
+        .card::after{
+            content: " End";
+            color: red;
+        }
+        p::selection{
+            background-color: aqua;
+            color: red;
+        }
+        input::placeholder{
+            /* color: red; */
+            background-color: aqua;
+            /* font-size: 10px; */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="cards">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente vitae modi voluptas dicta praesentium magni saepe ipsam aspernatur architecto! Temporibus tenetur eos ea, corrupti minus hic repellendus amet atque ipsa!</p>
+        <div class="card">This is sanam.</div>
+        <div class="card">This is Ashish.</div>
+        <div class="card">This is Samir</div>
+    </div>
+    <div class="Form">
+        <h2>Enter your Details</h2>
+        <label for="Name">Name</label>
+        <input type="text" placeholder="Enter your Name">
+
+    </div>
+    
+</body>
+</html>

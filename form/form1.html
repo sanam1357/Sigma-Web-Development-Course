@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goethe B1 Prüfung Anmeldung</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="fullname">Fullname</label>
+            <br>
+            <input type="text" name="fullname" id="fullname" placeholder="Full name" required>
+        </div>
+        <div>
+            <label for="Email">Email Address</label>
+            <br>
+            <input type="email" name="Email" id="Email" placeholder="Enter your Email Address">
+        </div>
+        <div>
+            <label for="Address">Permanent Address</label>
+            <br>
+            <select name="Address" id="Address">
+                <option value="Blank"> </option>
+                <option value="Kathmandu">Kathmandu</option>
+                <option value="Butwal">Butwal</option>
+                <option value="Naranghat">Naranghat</option>
+                <option value="Kawasoti">Kawasoti</option>
+                <option value="Muglin">Muglin</option>
+            </select>
+        </div>
+        <div>  
+            <label for="Gender">Gender</label>
+            <br>
+            <input type="radio" name="Gender" id="male">
+             <label for="male">Male</label>
+             <input type="radio" name="Gender" id="female">
+             <label for="female">Female</label>
+        </div>
+        <div>
+            <label for="dob">Date of Birth</label>
+            <input type="date" name="dob" id="dob">
+        </div>
+        <div>
+            <textarea name="Comment" id="comment" placeholder="Enter your comment" rows="5" cols="30"></textarea>
+        </div>
+        <input type="checkbox" name="confirm" id="confirm">
+        <label for="confirm">I agree that all the information given by me is correct.</label>
+        <br>
+        <input type="submit" value="Submit">
+
+
+    </form>
+</body>
+</html>

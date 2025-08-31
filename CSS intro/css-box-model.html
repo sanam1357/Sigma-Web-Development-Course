@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .sbox{
+            background-color: rgb(110, 198, 239);
+        }
+        .box1{
+            padding: 5px;
+            border: 5px solid black;
+            margin: 10px;
+            height: 50px;
+            box-sizing: border-box; 
+            /* if we do box sizin : boder box then our box element will be total 50px height: 
+            content:40px
+            Padding:5px
+            Border: 5px
+            Total;  50px
+            addition margin: 10px
+            
+            Without box-sizing: border-box;
+            content :50px 
+            padding : 5px
+            border: 5px
+            total : 60 px
+            addition margin : 10px
+            
+            
+            */
+
+        }
+        .box2{
+            padding: 5px;
+            border: 5px solid rgb(249, 21, 21);
+            margin: 10px;
+            height: 50px;
+            box-sizing: border-box; 
+            
+        }
+        h1,h2,p,img,div{
+            padding-left: 5px;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+            background-color: antiquewhite;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model</h1>
+    <p>Every things in the CSS is like a box. Eg. Div,paragraph,span e.t.c</p>
+    <h2>Example are Given Below:</h2>
+    <div class="sbox box1">
+        This is Box 1
+
+    </div>
+    <div class="sbox box2">
+        This is Box 2
+    </div>
+    <h2>Css Margin Collapse</h2>
+    <div class="box3">
+        We can See the margin collase example in above box. 
+        That means it will take the margin of the box which have more margin when two box margin are near each each. I hope you understand in the future.
+    </div>
+    <img src="https://miro.medium.com/v2/resize:fit:421/0*kAD00byJs8jdmXvr.png" alt="Css Margin Collapse">
+
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .nav {
+            display: flex;
+            margin: 5vh 10vw 0vh 10vw;
+            justify-content: center;
+            justify-items: center;
+            gap: 20px;
+            width: 80vw;
+            flex-wrap: wrap;
+            /* border: 2px solid black; */
+            /* flex-wrap: wrap; */
+        }
+
+        .nav .item {
+            /* border: 2px solid black; */
+            align-self: center;
+
+        }
+
+        .nav .logo img {
+            width: 150px;
+            margin-right: 200px;
+            /* align-content: flex-start; */
+        }
+
+        .nav .img2 img {
+            width: 50px;
+        }
+
+        @media only screen and (max-width:910px) {
+            body {
+                .nav {
+                    flex-direction: column;
+                    align-content: flex-end;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="item logo"><img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Background-2.png"
+                alt="Ultra edit logo"></div>
+        <div class="item">Products</div>
+        <div class="item">Pricing</div>
+        <div class="item">Resources</div>
+        <div class="item">About us</div>
+        <div class="item img2"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcKsE7_MvVCRJLZPkqoCRy452rJvpF_-wIOg&s"
+                alt="language convert"></div>
+    </div>
+</body>
+
+</html>

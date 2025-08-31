@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous vs Asynchronous</title>
+</head>
+
+<body>
+    <h1>Synchronous vs Asynchronous</h1>
+    <p>
+        Asynchronous Runs in the background, doesn't block code. <br>
+        Synchronous Runs in order, blocks next step until done</p>
+    <span>Example is Given in Javascript below(console):- </span>
+    <script>
+        //synchronous 
+        console.log("Synchronous Example ") 
+        console.log("1");
+        alert("Wait here");  // Blocks everything
+        console.log("2");
+        
+        
+        //Asynchronous
+        console.log("Synchronous Example ") 
+        console.log("1");
+
+        setTimeout(() => {
+            console.log("2");  // Runs later, after delay
+        }, 1000);
+
+        console.log("3");
+
+      
+
+
+    </script>
+    
+</body>
+
+</html>

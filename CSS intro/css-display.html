@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box2 {
+            display: inline;
+            border: 2px solid red;
+            /* padding: 10px; */
+            margin: 20px;
+        }
+
+        .box3 {
+            display: inline;
+            border: 2px solid red;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box1 {
+            margin: 20px;
+            border: 2px solid black;
+            display: flex;
+            justify-content: center;
+        }
+
+        .spa {
+            display: inline-block;
+            border: 2px solid blue;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .box4 {
+            /* display: none; */
+            /* dislay none hides the content and it's space */
+            visibility: hidden;
+            /* Visbility hidden makes the content invisible */
+        }
+
+        .change {
+            border: 2px solid red;
+            display: table;
+
+        }
+
+        span {
+            /* display: block; */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="box2">Display in CSS</h1>
+    <p>
+        Div is an Block Element. Span is an inline Element.
+        Block Element nehmt ein voll line Width ob es fodern ein line oder nicht.
+        Aber Span nehmt nur die Width das fodern.
+    </p>
+    <ol>
+        <li>inline</li>
+        <li>inline-block</li>
+        <li>flex</li>
+        <li></li>
+        <li></li>
+    </ol>
+    <div class="box1">This is Box 1</div>
+    <div class="box2">This is Box 2</div>
+    <div class="box3">This is Box 3</div>
+    <div class="box4">This is Box 4</div>
+    <span class="spa">Hi</span>
+    <span class="spa">I</span>
+    <span class="spa">am sanam</span>
+    <div class="change">
+        hi this div is for experiment.
+    </div>
+    <span>
+        hehe, this is span
+    </span>
+    <span>
+        this is span 2
+    </span>
+    <div>
+        lulu, this is another div
+    </div>
+
+</body>
+
+</html>

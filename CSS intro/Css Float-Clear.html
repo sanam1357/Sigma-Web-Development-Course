@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float & Clear</title>
+    <style>
+        *{
+            margin: 0;
+            p:0;
+        }
+        .cards{
+            border: 2px solid black;
+            overflow: auto;
+        }
+        .card{
+            border: 2px solid rgb(223, 28, 28);
+            margin: 5px;
+        }
+        img{
+            float: right;
+            /* float is used to move the element left ,right as your wish */
+        }
+        .cards :nth-child(3) {
+            background-color: aqua;
+            clear: both;
+            /* Clear helps to clear the side you can chose left side to be cleared or right as your wish also both  */
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Float & Clear</h1>
+    <div class="cards">
+        <img src="https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/04/pokhara-fewa-lake.jpg" alt="Lake img" width="250">
+        <div class="card">Card 1</div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad earum eum doloribus incidunt beatae aperiam accusantium sint aliquam repudiandae ea, quibusdam vitae quo natus perspiciatis, illum eos dolores culpa commodi alias veritatis aspernatur. Reprehenderit non officiis amet at, nesciunt facere vitae delectus unde, maiores fuga, sed optio fugit odio nihil impedit? Ipsa, quae ducimus nam unde eius facilis perspiciatis, eos, nisi mollitia eaque nobis blanditiis perferendis. Inventore quibusdam fuga ducimus sit. Ipsum ab veritatis at dolorem incidunt quod perferendis iure asperiores omnis nobis error accusantium, debitis sint possimus quam dolorum. Ipsam repellat nemo, illo dolorum praesentium harum incidunt sunt.
+        </p>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+</body>
+</html>

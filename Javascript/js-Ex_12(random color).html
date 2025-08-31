@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Exercise-12</title>
+    <style>
+        .box{
+            height: 60px;
+            width: 100px;
+            border: 2px solid black;
+            margin: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+    <script>
+        ran = Math.round((Math.random()*4)+1)
+        const check = {
+            1 : "red",
+            2 : "green",
+            3 : "yellow",
+            4 : "blue",
+            5 : "purple"
+        }
+        boxes = document.querySelectorAll(".box")
+        boxes.forEach(e => {
+            ran1 = Math.round((Math.random()*4)+1)
+            ran2 = Math.round((Math.random()*4)+1)
+            e.style.backgroundColor = check[ran1];
+            e.style.color = check[ran2]
+            
+        });
+
+    </script>
+</body>
+</html>

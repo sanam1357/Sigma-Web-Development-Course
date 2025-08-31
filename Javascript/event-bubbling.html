@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubbling</title>
+</head>
+<style>
+    .container,.section,.box{
+        padding: 20px;
+        
+    }
+    .container{
+        background-color: green;
+    }
+    .section{
+        background-color: blue;
+    }
+    .box{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="box">
+                I am a Box
+            </div>
+        </div>
+    </div>
+    <script>
+        //Event-Bubbling
+        //it is an condition where if the child is cliced or any event listener of the child is activated, it is also activated for parent like section, container
+        // because box is inside section and section is inside container. so when we click box then we have also clicked section and when we have clicked section then we have also clicked container
+        document.querySelector(".box").addEventListener("click",(e)=>{
+            alert("Box is clicked")
+             e.stopPropagation() //to stop event bubbling
+        })
+        document.querySelector(".section").addEventListener("click",(e)=>{
+            alert("Section is clicked")
+        })
+        document.querySelector(".container").addEventListener("click",(e)=>{
+            alert("Container is clicked")
+            
+        })
+    </script>
+</body>
+</html>

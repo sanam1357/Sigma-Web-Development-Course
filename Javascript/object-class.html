@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object & Classes</title>
+</head>
+<body>
+    <script>
+        class Human{
+            constructor(name,age){
+                this.nama = name
+                this.alt = age
+                console.log(`Die Nama ist ${this.nama} und Er/Sie ist ${this.alt} jara Alt. `)
+
+            }
+            nature(){
+                console.log("The Nature is Normal")
+            }
+            eat(){
+                console.log("Yes, it can eat")
+            }
+            run(){
+                console.log("yes,it can run")
+            }
+        }
+
+        samir = new Human("samir",26)
+
+        class SuperHero extends Human{//inherting all from previous
+            constructor(name,age){
+                super(name,age)
+                this.name = name;
+                console.log("Our Super Hero is ",this.name)
+            }
+            fly(){
+                console.log("He can Fly.")
+            }
+            nature(){
+                super.nature() //inheriting the previous method also
+                console.log("The Nature is Positive Superpower") //overrideing method
+            }
+
+
+        }
+        sanam = new SuperHero("sanam",25)
+        
+
+        // A static method is a function that belongs to the class itself, not to the objects (instances)
+        //it means we can call the static method without creating any object
+        class mathhero{
+            static add(a,b){
+                return(a+b)
+            }
+
+            multiply(a,b){
+                return(a*b)
+            }
+        }
+
+        console.log(mathhero.add(5,2)) //doesn't throw error
+        // console.log(mathhero.multiply(5,2))
+        //the above multipy method throw error because we haven't created object
+
+        // solve = new mathhero()
+        // console.log(solve.multiply(5,2))
+        //for non-static function we have to create object first
+
+        //instance of object
+        //it means: is the object is created from the class
+        console.log("Is Samir instance of Human ",samir instanceof Human)
+        console.log("Is Samir instance of SuperHero ", samir instanceof SuperHero)
+        console.log("Is sanam instance of Human(it is alread instance of superhero) ", sanam instanceof Human)
+    </script>
+</body>
+</html>

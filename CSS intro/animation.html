@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .container{
+            width: 80vw;
+            height: 80vh;
+            background-color: yellow;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box{
+            width: 5vw;
+            height: 5vh;
+            border: 2px solid black;
+            color:white;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
+        .box1{
+            background-color: red;
+            animation: firstanimation;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+            /* animation-direction: reverse; */
+            /* anmaiton reverse will make the animaotin reverse */
+            /* animation-play-state: paused; */
+            /* we can paused the animation by changing it's state */
+            /* This is animation long hand */
+        }
+        .box2{
+            background-color: purple;
+            animation: secondanimation 2s ease-in-out 2s 3 forwards,
+                       rotateanimation 1s ease-in-out 1s 3;
+            /* this is animation short hand */
+            
+        }
+        @keyframes firstanimation {
+            from{
+
+            }
+            To{
+                transform: translateX(30vw);
+            }
+            
+        }
+
+        @keyframes secondanimation {
+            from{
+
+            }
+            To{
+                transform: translateX(-30vw);
+            }
+        }
+        @keyframes rotateanimation {
+            0%{
+                transform: rotate(0deg);
+            }
+            25%{
+                transform: rotate(100deg);
+            }
+            50%{
+                transform: rotate(150deg);
+            }
+            75%{
+                transform: rotate(250deg);
+            }
+            100%{
+                transform: rotate(350deg);
+            }
+            
+        }
+            
+    </style>
+
+</head>
+<body>
+    <h1>Animation</h1>
+    <p>Animation is also same as transition but we can have more options in it.</p>
+    <div class="container">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+    </div>
+    
+</body>
+</html>

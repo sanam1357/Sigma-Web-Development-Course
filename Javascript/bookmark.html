@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+</head>
+
+<body>
+    <nav>
+        <h1>Bookmark Manager</h1>
+    </nav>
+    <main>
+        <input type="text" id="url" placeholder="Enter the URL">
+        <input type="text" id="name" placeholder="Enter the Website Name">
+        <button type="text" id="submit">Add Bookmarks</button>
+        <h2>Bookmarks List</h2>
+        <div class="Blist">
+
+        </div>
+
+
+    </main>
+    <script>
+        function addbook() {
+            let url = document.getElementById("url").value
+            let name = document.getElementById("name").value
+            console.log(url, name)
+            if (url.length > 0 && name.length > 0) {
+                console.log("if statemetn")
+                let lk = document.createElement("a")
+                lk.href = url;
+                lk.innerText = name;
+                lk.style.cssText = ("display:block; text-decoration: none;color:black;")
+                document.querySelector(".Blist").append(lk);
+                // url = document.getElementById("url").value = "";
+                // name = document.getElementById("name").value = "";
+
+
+            }
+            else {
+                alert("Please Fill the Form")
+            }
+
+        }
+
+        document.getElementById("submit").addEventListener("click", addbook)
+
+        //storing the data
+       
+
+        
+
+
+    </script>
+</body>
+
+</html>

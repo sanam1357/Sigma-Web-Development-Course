@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+
+<body>
+    <h1>Handling Error in JS</h1>
+
+    <p>
+    <h3>try</h3> Runs code that might cause an error <br>
+    <h3>catch</h3> Catches and handles the error <br>
+    <h3>throw</h3> Creates an error manually <br>
+    <h3>onerror</h3> Handles errors in loading scripts/images
+    </p>
+
+
+    <script>
+        // throw new Error("Cannot divide by zero!");
+        try {
+            let a = 5;
+            a = parseInt(a) //to convert into int
+            console.log(a);
+            console.log(b); // ❌ This will cause an error
+        }
+        catch (error) {
+            console.log("Something went wrong!");
+            console.log("Error message: ", error.message);
+        }
+        finally{
+            console.log("This always run")
+            console.log("But it's main use is: it is used inside fuction. A fuction is stopped when it return values althrough finally runs ")
+        }
+
+
+
+        //handing Error Example 2
+        // function loadscript(src, callback, errorCallback) {
+        //     let script = document.createElement("script");
+        //     script.src = src;
+
+        //     script.onload = () => callback(script);
+
+        //     script.onerror = () => errorCallback(new Error("Script failed to load: " + src));
+
+        //     document.head.append(script);
+        // }
+
+        // loadscript(
+        //     "https://example.com/fake.js",
+        //     function () {
+        //         console.log("Script loaded!");
+        //     },
+        //     function (err) {
+        //         console.log("Error loading script:");
+        //         console.log(err.message);
+        //     }
+        // );
+
+    </script>
+</body>
+
+</html>

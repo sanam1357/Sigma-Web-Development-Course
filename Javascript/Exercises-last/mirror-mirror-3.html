@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mirror Mirror</title>
+</head>
+<body>
+
+    <script>
+        str = "hero"
+        function revstr(str) {
+            len = str.length
+            let newstr = ""
+            for (let index = (len-1); index >= 0; index--) {
+                // console.log(str[index])
+                newstr += str[index]
+                
+            }
+            return newstr
+            
+        }
+        rev = revstr(str)
+        console.log(rev)
+
+
+
+    </script>
+    
+</body>
+</html>

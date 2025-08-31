@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS GRID</title>
+    <style>
+        .container{
+            display: grid;
+            border: 2px solid red;
+            /* grid-template-columns:[Erste] 200px [zweite] 100px; */
+            /* grid-template-rows: 100px 200px 100px; */
+            /* justify-content: center; */
+            /* align-items: center; */
+            /* grid-template-columns: repeat(4,1fr); */
+            
+
+            
+        }
+        .container .item{
+            border: 2px solid rgb(34, 10, 10);
+            height: 20px;
+        }
+        .item:nth-child(even){
+            background-color: yellow;
+        }
+        .item-4{
+            grid-column: Erste/2;
+            grid-row: 1/2;
+            /* align-self: flex-end; */
+            /* justify-self: flex-end; */
+        }
+        /* .item-1{
+            background-color: aqua;
+            grid-column: 1/2;
+            grid-row: 1/2; */
+            /* z-index:1;
+        } */
+
+        .item-2{
+            /* grid-column: 2/3;
+            grid-row: 3/4; */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>What is CSS Grid ?</h1>
+    <p>Grid is a display property that helps us to create a layout and manage our content</p>
+    <p>For.Example:-</p>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+    </div>
+    
+</body>
+</html>

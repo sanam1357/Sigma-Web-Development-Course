@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sum Selector</title>
+</head>
+<body>
+
+<script>
+nummer = [2,2,-1,5,10,-1,6]
+function summer(nummer){
+    sum = 0
+    for (const e of nummer) {
+        if(e>=0){
+            sum = sum + e
+        }
+        else{
+            break;
+        } 
+        
+    }
+    return sum
+
+}
+
+console.log(summer(nummer))
+
+
+</script>
+    
+</body>
+</html>

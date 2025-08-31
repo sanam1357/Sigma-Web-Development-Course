@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 40vw;
+    border: 2px solid rgba(0, 0, 0, 0.153);
+    margin: 10px;
+    position: relative;
+    top: 5vh;
+    left: 20vw;
+    border-radius: 15px;
+    box-shadow: 0px 8px 10px 1px rgba(6, 6, 52, 0.237);
+}
+.fewa-lake{
+    width: 90%;
+    /* display: flex; */
+    /* margin: auto; */
+    
+}
+.data-list li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    margin-left: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 8px 10px 1px rgba(6, 6, 52, 0.114);
+    position: relative;
+    /* top: 20px; */
+    border-radius: 10px;
+}
+.read{
+    padding: 3% 5%;
+    color: rgb(0, 47, 255);
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    background-color: rgba(122, 179, 225, 0.3);
+    box-shadow: 0px 8px 10px 1px rgba(6, 6, 52, 0.114);
+    border-radius: 20px;
+    display: inline-block;
+    position: adsolute;
+    /* text-align: ; */
+    margin: 5% 30%;
+    text-align: center;
+}
+h2{
+    margin: 10px;
+}
+p{
+    display: inline-block;
+    margin: 10px;
+}

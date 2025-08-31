@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Whati is Callback function?</h1>
+    <p>
+        A callback function is a function you give to another function to run later.
+        We can name it whatever we like, in the below example i have given name callback.
+    </p>
+    <script>
+        //Example-1
+        // function makePizza(callback) {
+        //     console.log("Making pizza... 🍕");
+        //     setTimeout(() => {
+        //         console.log("Pizza is ready!");
+        //         callback(); //this is a callback function
+        //     }, 2000); // Wait 2 seconds to simulate cooking
+        // }
+
+        // function eatPizza() {
+        //     console.log("Yum! Eating pizza now. 😋");
+        // }
+
+        // makePizza(eatPizza);
+
+        //Example-2
+        //defining Function
+          function loadscript(src,callback){ 
+            let script = document.createElement("script")
+            script.src = src
+            script.onload = ()=> callback(script)
+            document.head.append(script)
+        }
+
+        //longmethod  to define & calling function for short functions
+        // function info(js){//this will be used as call back function
+        //     alert("Your Script is Sucessfully loaded")
+        //     alert(js.src)
+        // }
+
+        // //calling function
+        // loadscript("factorial.js",info)
+
+
+        //shorthand
+        loadscript("factorial.js",info = (js)=>{
+            alert("Your script is loaded sucessfully")
+            alert(js.src)
+        })
+
+
+
+    </script>
+</body>
+
+</html>

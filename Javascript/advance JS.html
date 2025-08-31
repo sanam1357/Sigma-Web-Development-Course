@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Javascript</title>
+</head>
+
+<body>
+
+    <script>
+        //IIFE
+        //It is a Javascript function that runs as soon as it is defined.
+        async function slow(){
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(45)
+
+                }, 2000);
+            })
+
+        }
+
+        //IIFE Beispiele:
+        (async function main() {
+            // let a = await slow()
+            // console.log(a)
+            // let b = await slow()
+            // console.log(b)
+
+
+        })();
+        //the main fuction runs automatically after created
+
+        //Destructuring
+        //Destructugin assigment is used to unpack values from an array, or properties from object into distinct variables
+
+
+        let [x,y] = [8,17]
+        console.log(x,y)
+
+        let[a,b,...other] = [1,2,3,5,6,3,6,3]
+        //here i have assigned a =1, b=2, other is a varaible = 2,3,6.......end
+        console.log(a,b,other)
+
+        //destructuring objects
+        const obj = {m:1,n:2,o:3}
+        const {m,o} = obj;
+        console.log(m,o)
+        
+        
+        //Spread syntax(...)
+
+        const arr = [1,4,6]
+        const obj1 = {...arr}
+        console.log(obj1)
+        function sum(a,b,c){
+            return a+b+c
+        }
+        //long method
+        console.log(sum(arr[0],arr[1],arr[2]))
+        console.log(sum(...arr))
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

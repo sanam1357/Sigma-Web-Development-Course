@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Variables</title>
+    <style>
+        :root{
+            --tcolor: white;
+            --bcolor : rgb(5, 28, 12);
+            --sectcolor : rgb(91, 236, 171);
+            --dpad : 10px;
+            --dmargin : 10px;
+            --commargin:10px;
+            /* from here we can overall control all things form the variable. for example if i change the --commaring then it will effect two element margin h1 and paragraph */
+            /* --imglink : "https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/04/pokhara-fewa-lake.jpg" */
+
+        
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .nav ul{
+            display: flex;
+            list-style: none;
+
+        }
+        .nav li{
+            padding: var(--dpad);
+            margin: var(--dmargin);
+            color: var(--tcolor);
+            background-color: var(--bcolor);
+            /* heres is css varibale used now we can change value of somthing in one click for all */
+        }
+        .nav{
+
+            color: var(--tcolor);
+            background-color: var(--bcolor);
+        }
+        .footer{
+            width: 100vw;
+            position: absolute;
+            bottom: 0px;
+            color : var(--setocolor,yellow);
+            /* heres is defined if the variable is not found then we use the seondary value that is yellow */
+            background-color: var(--bcolor);
+        }
+        .footer ul{
+            display: flex;
+            list-style: none;
+
+        }
+        .footer ul li{
+            padding: var(--dpad);
+            margin: var(--dmargin);
+        }
+        .photo{
+            width: 50vw;
+            height: 20vh;
+            border: 2px solid black;
+            background-image: url(https://www.nepalsanctuarytreks.com/wp-content/uploads/2018/04/pokhara-fewa-lake.jpg)
+
+        }
+        h1{
+            --tcolor : rgb(230, 12, 12);
+            color: var(--tcolor);
+            margin: var(--commargin);
+            /* here we have converted the global variable into  local color */
+        }
+        p{
+            color: var(--tcolor,green);
+            background-color: var(--bcolor);
+            margin:var(--commargin);
+        }
+        
+
+
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact
+            </li>
+        </ul>
+    </div>
+    <h1>What is CSS Variables ?</h1>
+    <p>Css Variables are the variable that stores values like color,values for pading , marging, url , anything.It is used when we used reapeated value like same color, same maring, padding , vlaue e.t.c</p>
+    <div class="photo">
+
+    </div>
+    <div class="type">
+        <h2>Types of Variable</h2>
+        <ol>
+            <li>Global Variable</li>
+            <li>Local Variable</li>
+        </ol>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>Copyright @ Sanam</li>
+            <li>Maps</li>
+            <li>Links</li>
+        </ul>
+    </div>
+</body>
+
+</html>

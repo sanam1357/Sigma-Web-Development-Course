@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            font-size: 15px;
+        }
+        div{
+            font-size: 16px;
+        }
+        .firstp{
+            border: 5px solid red;
+            width: 50vw;
+            margin: 10px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 2rem;
+        }
+        .secondp{
+            border: 5px solid red;
+            width: 50vw;
+            margin: 10px auto;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 2em; 
+            /* em makes the double unit of it's parent section 
+            so the parent unit div has 16px and so ti has
+            font size 32px*/
+        }
+        .main2{
+            width: 50vw;
+            box-sizing: border-box;
+            border: 5px solid blue;
+        }
+        .main2 p{
+            box-sizing: border-box;
+            border: 5px solid purple;
+            width: 50%;
+            line-height: 30px;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Units in CSS</h1>
+    <ol>
+        <li>Pixel(px)</li>
+        <li>Em</li>
+        <li>Rem</li>
+        <li>Viewpoint heiht(Vh)/Viewpoint Widht(Vw)</li>
+        <li>Vmin / Vmax</li>
+        <li>Percentage</li>
+    </ol>
+    <h2>Using The units</h2>
+    <div>
+        Hi the Div is Started Here:
+        <div class="firstp">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quaerat exercitationem asperiores natus eligendi, velit, sint alias impedit quisquam maxime odio ut porro.
+        </div>
+        <div class="secondp">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore tenetur vero adipisci iste aperiam, facere soluta ipsa enim velit? Dignissimos reprehenderit, praesentium consectetur aut quos quibusdam deserunt veritatis, eveniet aperiam repellat culpa necessitatibus. Quis numquam dolor itaque, fugit nesciunt natus! Libero, voluptatum illo.
+        </div>
+    </div>
+    <div class="main2">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto minus architecto velit cum consequuntur necessitatibus nulla ad aliquam molestias sed?
+        </p>
+    </div>
+    
+</body>
+</html>

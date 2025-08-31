@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS FlexBox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            background-color: antiquewhite;
+            min-height: 50vh;
+            border: 2px solid black;
+            display: flex;
+            /* flex-direction: column; */
+            /* justify-content: center; */
+            align-items: center;
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            /* align -content is can be used only when flex-wrap is used */
+            /* flex-flow: column; */
+            /* gap: 10px; */
+            /* row-gap: 20px; */
+            /* column-gap: 10px; */
+            /* gap: 20px 40px; */
+            /* We can put row-gap & colum game at same times first is row gap and second is column gap */
+            
+
+
+
+
+        }
+        .item{
+            border: 2px solid red;
+            background-color: black;
+            color: white;
+            width: 5vw;
+            /* height: 30px; */
+            margin: 10px;
+            text-align: center;
+        }
+        .item1{
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+            order: 0;
+            /* order default value is 0 */
+            /* align-self: center; */
+            /* justify-self: center; */
+        }
+        .item2{
+            /* flex-grow: 0; */
+            order: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>What is FlexBox ?</h1>
+    <p>Flexbox is a display property in  CSS that help to manage and align the content.</p>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+        <div class="item">13</div>
+        <div class="item">14</div>
+        <div class="item">15</div>
+        <div class="item">16</div>
+    </div>
+
+    
+</body>
+</html>

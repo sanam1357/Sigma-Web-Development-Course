@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Maker</title>
+</head>
+
+<body>
+
+    <script>
+        let arr = ["s", "a", "n", "n", "u","p","g","g"]
+        // console.log("lenght",arr.length)
+        function double(arr) {
+            new_ar = []
+            len = arr.length
+            // console.log(len)
+            for (let index = 0; index < arr.length; index++) {
+                const e = arr[index];
+                if(e!=arr[index+1]){
+                    // console.log(e)
+                    new_ar.push(e)
+                }
+                else{
+                    // console.log("duplicate is:",e)
+                }
+                
+                
+            }
+            // console.log(new_ar)
+            dbl_ar=[]
+            new_ar.forEach(e => {
+                dbl_ar.push(e)
+                dbl_ar.push(e)
+                
+            });
+            return(dbl_ar)
+            
+           
+        }
+        let n = double(arr)
+        console.log(n)
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selector & It's Type</title>
+    <style>
+        /* Element Selecotr */
+        p{
+            color: blue;
+        }
+        /* CLASS Selector */
+        .first-class{
+            color: red;
+        }
+        /* ID selector */
+        #my-id{
+            background-color: rgb(26, 240, 115);
+        }
+        /* Child Selector */
+        div > span{
+            background-color: aqua;
+        }
+        /* ol > li > div > span {
+            color: red;
+        /* }  */
+        /* this above css is also example of child selector */
+
+        /* Descendant Selector */
+        div article{
+            color: yellow;
+            background-color: black;
+        }
+        /* Pesudeo Selector */
+        a:visited{
+            color: rgba(7, 222, 7, 0.91);
+        }
+        a:hover{
+            background-color: purple;
+        }
+        /* Universal Selector */
+        *{
+            margin:0;
+            padding:0;
+        }
+        /* Attribute selector */
+        [alt~="blume"] {
+  border: 5px solid green;
+}
+
+0
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>
+            What is CSS selector?
+        </h1>
+        <div>CSS selector are the element that is used to select the parts of HTML to design or decorate it.</div>
+    </header>
+    <main>
+        <div>
+            <h2>Types of CSS Selector</h2>
+            <ol>
+                <li>Element Selector</li>
+                <li>Class Selector</li>
+                <li>ID Selector</li>
+                <li>Child Selector</li>
+                <li>Descendant Selector</li>
+                <li>Pesudo Selector</li>
+            </ol>
+        </div>
+        <div>
+            <h2>Showing The Example of The selector</h2>
+            <ol>
+                <li>
+                    <p>Lorem ipsum dolor sit amet.
+                    (This is element select and it select the element likes div,p,span e.t.c)
+                    </p>
+                </li>
+                <li>
+                    <div class="first-class">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, possimus?
+                        (We can give the name of the class and use the class selector as we like.)
+                    </div>
+                </li>
+                <li>
+                    <div id="my-id">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veniam dolorem amet quia? Debitis, facere.</div>
+                </li>
+                <li>
+                    <div>
+                        <span>
+                            Hallo, Ich bin Span. Das kind von div.(we can give which child or like path and use child selector)
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>
+                             <article>Ich bin paragraph.Das kind von Div (we do not have to give full path but it will include all the child inside it)</article>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <h1>My Bookmark list</h1>
+    <h2>Tech Bookmarks</h2>
+    <a href="http://www.youtube.com">Open youtube</a><br>
+    <a href="http://mail.google.com">Open Gmail</a><br>
+    <a href="http://www.youtube.com">Open youtube</a><br>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum iure velit corporis provident similique ipsum eveniet eos quam, possimus nihil, commodi debitis nulla placeat sapiente, labore quod repellendus itaque. Molestiae.</p>
+
+                </li>
+            </ol>
+        </div>
+
+    </main>
+    <footer>
+        <img src="" alt="blume" title="flower photo">
+    </footer>
+</body>
+</html>

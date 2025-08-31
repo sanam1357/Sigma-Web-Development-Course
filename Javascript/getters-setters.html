@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters & Setters</title>
+</head>
+
+<body>
+    <h1>  Getter  </h1>
+    <div>Used For: Reading a value </div>
+    <div> Example : 	object.property  </div>
+    
+    <h1>  Setter  </h1>
+    <div>Used For: Writing/changing value </div>
+    <div> Example : 	object.property = val  </div>
+
+    <script>
+        //Example 1
+        class Person {
+            constructor(first, last) {
+                this.first = first;
+                this.last = last;
+            }
+
+            // Getter: full name
+            get fullName() {
+                return this.first + " " + this.last;
+            }
+
+            // Setter: full name
+            set fullName(name) {
+                const parts = name.split(" ");
+                this.first = parts[0];
+                this.last = parts[1];
+            }
+        }
+
+        let p = new Person("Sanam", "Thanet");
+
+        console.log(p.fullName); // ✅ Calls the getter → "Sanam Thanet"
+
+        p.fullName = "Samir Thapa"; // ✅ Calls the setter
+        console.log(p.first);       // Samir
+        console.log(p.last);        // Thapa
+
+        //Example 2
+        class User {
+            constructor(name) {
+                this._name = name; // "private"-like (not real private)
+            }
+
+            get name() {
+                return this._name;
+            }
+
+            set name(newName) {
+                if (newName.length < 3) {
+                    console.log("Name too short!");
+                } else {
+                    this._name = newName;
+                }
+            }
+        }
+
+        let u = new User("Sanam");
+        console.log(u.name); // ✅ Sanam (getter)
+
+        u.name = "Al";       // ❌ Too short
+        u.name = "Alex";     // ✅ Ok
+        console.log(u.name); // Alex
+
+
+
+
+    </script>
+
+</body>
+
+</html>

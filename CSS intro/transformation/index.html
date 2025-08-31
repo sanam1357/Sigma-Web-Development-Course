@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            height: 80vh;
+            border: 2px solid black;
+            margin: 5vw;
+
+        }
+
+        .item1 {
+            width: 10vw;
+            height: 10vw;
+            border: 2px solid red;
+            background-color: blue;
+            color: white;
+            align-content: center;
+            /* transform: scale(2); */
+            /* scale will increase the x and y index both and make the object bigger */
+
+            /* transform: scalex(2); */
+            /* make the object in x axis 2x bigger */
+
+            /* transform: scaley(2); */
+            /* make the object in Y axis 2x bigger */
+
+            /* transform: translatex(10vw); */
+            /* make the object move in X-axis */
+
+            /* transform: translatey(10vh); */
+            /* make the object move in y-axis */
+
+            /* transform: translate(2vw,3vh); */
+            /* move the object both in x & y axis */
+
+            /* transform: skewx(40deg); */
+            /* transform: skewy(40deg); */
+            /* transform: skew(40deg,60deg); */
+
+
+            /* transform:rotateX(45deg); */
+            /* transform:rotatey(60deg); */
+
+            /* transform: rotate(45deg); */
+
+
+            /* The CSS matrix() function defines a 2D transformation,
+            using a matrix of six values. The matrix() function takes six parameters,
+            which allows you to rotate,
+            scale,
+            move,
+            and skew elements */
+            /* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+            /* transform: matrix(2, 1, 0.5, 1, 90, 70); */
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transformation CSS</h1>
+    <p>It is the property of the CSS to move any object in x,y and Z index. We can also rotate and make the object
+        transform.</p>
+    <div class="box">
+        <div class="item1">
+            ITEM-1
+
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>

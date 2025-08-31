@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inserting & Removing Element in DOM</title>
+</head>
+<style>
+    .red-clr{
+        color:red;
+    }
+    .yellow-bg{
+        background-color: yellow;
+    }
+
+    .newbox{
+        border: 2px solid red; 
+        /* giving border to the new element inserted from javascript */
+    }
+
+    .blue-bg{
+        background-color: aqua;
+    }
+    .heromargin{
+        margin: 20px;
+    }
+    .heropad{
+        padding: 20px;
+    }
+</style>
+<body>
+    <h1>Inserting & Removing Element in DOM</h1>
+    <p class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur facilis corrupti eveniet nesciunt! Vel officia ab molestiae natus ratione veritatis possimus ipsam dignissimos reprehenderit dolore. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Distinctio dolorem natus a et itaque numquam corporis nulla, ipsa modi consequatur repellendus ullam odio ratione vel exercitationem fugit nemo dignissimos pariatur fugiat nihil.</p>
+    <div class="hero red-clr yellow-bg">
+        <b>I am hero.</b>
+         Ich bin Held.
+    </div>
+    <span>I am hidden</span>
+    <div class="removable">
+        this should be removed
+    </div>
+
+    <script>
+        hero = document.querySelector(".hero")
+        console.log(hero.tagName) //it show the which element is it like div,span,p
+
+        console.log(hero.innerHTML) // it show the content inner html of the hero
+        // hero.innerText = "du bist Held" // to modify the content
+
+        console.log(hero.outerHTML) //show the html with itself 
+
+        console.log(hero.textContent) //it only shows the text
+
+        sp = document.querySelector("span");
+        sp.hidden = true;
+
+
+        //Attributes methods
+        //Checking Attributes like class, id , style,name
+       console.log("hero has class attribute:",hero.hasAttribute("class")) 
+       console.log("hero has style attribute:",hero.hasAttribute("style")) 
+       console.log("Hero has the following classes:",hero.getAttribute("class"))
+       hero.setAttribute("style","border: 2px solid black")
+    //    hero.setAttribute("class","blue-bg") //setting attribule likes style,class
+
+
+    //insertion method
+    let mybox = document.createElement('div') //create
+    mybox.className = "newbox"
+    mybox.innerHTML = "You are Super man. <b> I am inserted by Js</b>"
+    document.body.append(mybox)
+
+    //inser method
+    let ins = document.createElement("span")
+    ins.innerHTML = "<b>inserted from JS</b>"
+    //if you want to check , plz check one by one to see
+    document.body.querySelector(".para").append(ins) //insert in the last of the content
+    document.body.querySelector(".para").prepend(ins) //insert in the beggining of the content
+    document.body.querySelector(".para").before(ins) //insert before the content
+    // document.body.querySelector(".para").replaceWith(ins) //insert in the after
+    
+    
+    //insert Adjacent HTML/Text/Element
+    document.body.querySelector(".para").insertAdjacentHTML("beforebegin"," <div> <b>Insert Adjacent HTML </b> </div>")
+    document.body.querySelector(".para").insertAdjacentHTML("afterbegin"," <div> <b>Insert Adjacent HTML </b> </div>")
+    document.body.querySelector(".para").insertAdjacentHTML("beforeend"," <div> <b>Insert Adjacent HTML </b> </div>")
+    document.body.querySelector(".para").insertAdjacentHTML("afterend"," <div> <b>Insert Adjacent HTML </b> </div>")
+    
+//to remove any element
+let rm = document.querySelector(".removable")
+rm.remove()
+
+//to show , add, remove class list
+console.log(hero.className)
+console.log(hero.classList)
+hero.classList.contains("heropad") //to check the class name is or not
+hero.classList.add("heromargin")
+// hero.classList.remove("")
+hero.classList.toggle("heropad") //to remove & add the class
+
+
+    </script>
+    
+</body>
+</html>
