@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1,
+h2 {
+    margin: 20px;
+}
+
+#songlist {
+    /* margin-top: 10px; */
+    background-color: antiquewhite;
+    min-height: 70vh;
+    margin: 10px;
+    color: rgb(16, 12, 12);
+    padding: 10px 30px;
+
+}
+
+#songlist>ol li {
+    margin: 5px
+}
+
+#songlist>ol li:hover {
+    cursor: pointer;
+
+}
+
+.player {
+    background-color: rgb(38, 5, 94);
+    height: 15vh;
+    margin: 10px;
+
+}
+
+.player .songdetail{
+    display: flex;
+    /* box-sizing: border-box; */
+    min-height: 16px;
+    padding: 0px 10px;
+    font-size: 14px;
+    justify-content: space-between;
+}
+
+.player .player-button {
+    display: flex;
+    gap: 10px;
+    height: 25px;
+    justify-content: center;
+    align-content: center;
+}
+
+.player .player-button img:nth-child(2) {
+    height: 50px;
+    align-self: center;
+}
+
+.player .player-button *:hover {
+    cursor: pointer;
+}
+
+.seekbar {
+    position: relative;
+    width: 90%;
+    margin: auto;
+
+}
+
+.seekbar #seekline {
+    width: 100%;
+}
+
+.seekbar *:hover{
+    cursor: pointer;
+}
+
+.seekbar #seekpoint {
+    position: absolute;
+    filter: invert(1);
+    translate: left;
+    left: 0%;
+    top: 25%;
+    transition: left 0.5s ease;
+}
